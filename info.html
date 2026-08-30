@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frogrealms: Elemental Climb - Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="Lenotion.png" alt="Lenotion Logo" class="nav-logo">
+            <button class="menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="beta test pre registration.html">Бета тест</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="info.html">Инвесторам</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="invest-section">
+        <h2 class="section-title">Инвестируйте в Lenotion</h2>
+        <p class="invest-text">Мы собрали $0 из $16,000, необходимых для финального рывка. Игра готова на 0%, и с вашей поддержкой мы выпустим её в 2025 году.</p>
+        <div class="invest-details">
+            <h3>Почему стоит инвестировать?</h3>
+            <ul>
+                <li>Уникальная концепция: рынок survival-игр растёт, а Frogrealms предлагает свежий взгляд.</li>
+                <li>Целеустремлёные энтузиасты: более 20 лет совокупного опыта в игровой индустрии и работы.</li>
+                <li>Прозрачность: инвесторы получат долю прибыли и доступ к бета-тесту так же полную отчётность от нас и доступ К нашей roud-map.</li>
+            </ul>
+        </div>
+        <a href="contact.html" class="cta-button">Связаться с нами</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="neon-text">© Lenotion 2025. Все права защищены.</p>
+            <div class="social-links">
+                <a href="https://discord.gg/yourserver" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://kickstarter.com/yourlink" target="_blank"><i class="fab fa-kickstarter"></i></a>
+                <a href="https://instagram.com/yourlink" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Бургер-меню
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

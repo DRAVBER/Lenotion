@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #ff8c00;
+    text-transform: uppercase;
+}
+
+/* Навигация */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    width: 120px;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #ff8c00;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e07b00;
+}
+
+/* Герой-секция */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #22d3ee;
+    margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #d0d0d0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #ff8c00;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e07b00;
+    transform: translateY(-3px);
+}
+
+/* Секция особенностей */
+.features-section {
+    padding: 6rem 2rem;
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    width: 300px;
+    background: rgba(34, 34, 34, 0.9);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.feature:hover {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+}
+
+.feature img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #d0d0d0;
+}
+
+/* Секция команды */
+.team-section {
+    padding: 6rem 2rem;
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px; /* Для 3D-эффекта */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: rgba(34, 34, 34, 0.9);
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front {
+    text-align: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #d0d0d0;
+}
+
+.team-social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center; /* Центрируем иконки */
+    gap: 1rem;
+}
+
+.team-social-links a {
+    color: #22d3ee;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.team-social-links a:hover {
+    color: #a855f7;
+    transform: translateY(-3px);
+}
+
+/* Секция для инвесторов */
+.invest-section {
+    padding: 6rem 2rem;
+    padding-top: 8rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.invest-text {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    color: #d0d0d0;
+}
+
+.invest-details {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+
+.invest-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.invest-details ul {
+    list-style: disc;
+    padding-left: 2rem;
+    color: #d0d0d0;
+}
+
+.invest-details li {
+    margin-bottom: 0.5rem;
+}
+
+/* Секция контактов */
+.contact-section {
+    padding: 6rem 2rem;
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 3rem;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p i {
+    color: #ff8c00;
+    margin-right: 0.5rem;
+}
+
+.contact-info .social-links a {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(34, 34, 34, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background: #2a2a2a;
+    border: 1px solid #ff8c00;
+    border-radius: 5px;
+    color: #e0e0e0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* Подвал */
+.footer {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.neon-text {
+    text-shadow: 0 0 10px #22d3ee, 0 0 20px #22d3ee;
+    color: #22d3ee;
+}
+
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center; /* Центрируем иконки в подвале */
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #22d3ee;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #a855f7;
+    transform: translateY(-3px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(10, 10, 10, 0.95);
+        width: 200px;
+        padding: 1rem;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .hero-desc {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .feature {
+        width: 100%;
+        max-width: 350px;
+    }
+    .card {
+        width: 200px;
+        height: 300px;
+    }
+    .team-img {
+        width: 120px;
+        height: 120px;
+    }
+    .team-social-links a {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Секция FAQ */
+.faq-section {
+    padding: 6rem 2rem;
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: rgba(34, 34, 34, 0.9);
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.faq-toggle i {
+    color: #ff8c00;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 1rem 0;
+    color: #d0d0d0;
+    font-size: 1rem;
+}
+
+.faq-answer a {
+    color: #22d3ee;
+    text-decoration: underline;
+}
+
+.faq-answer a:hover {
+    color: #a855f7;
+}
+
+/* Адаптивность для FAQ */
+@media (max-width: 768px) {
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+}
