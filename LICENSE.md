@@ -4,7 +4,7 @@
 
 Contributor: DRAVBER
 
-Source Code: https://github.com/DRAVBER/Studio
+Source Code: https://github.com/DRAVBER/Lenotion
 
 ## Purpose
 
